@@ -93,7 +93,7 @@ class EZO_RTD:
         self._write(cmd)
         time.sleep(delay)
         data = self._read(n)
-        rsp, payload, null = data[0], data[1:n], data[n]
+        rsp, payload, null = data[0], data[1:n-1], data[n-1]
         return payload
 
     # Low Level, Private methods
